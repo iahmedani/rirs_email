@@ -164,17 +164,7 @@ function mailOpts(el) {
   };
   return mailOptions;
 }
-// Query and Email
-knex('rirs_kobo')
-  .where({
-    uuid: 'ffd7d3f3-a627-404f-847c-6af860d232c2'
-  })
-  .then(single => {
-    var dd = JSON.parse(single[0].body);
-    console.log(dd);
 
-    
-  })
 app.get('/', (req, resp)=>{
   resp.json({'msg':'RIRS email utility'});
 })
