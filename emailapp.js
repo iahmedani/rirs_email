@@ -11,6 +11,16 @@ var knex = require('knex')({
 var request = require('request');
 var async = require('async');
 var nodemailer = require('nodemailer');
+var express = require('express')
+var bodyParser = require('body-parser')
+var multer = require('multer')
+var logger = require('morgan')
+
+var app = express()
+
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({extended:true}))
+app.use(logger('dev'))
 
 
 knex.schema.hasTable('rirs_kobo_email').then(function (exists) {
