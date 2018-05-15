@@ -13,7 +13,10 @@
     "mysql2": "^1.5.3",
     "nodemailer": "^4.6.4"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "async": "^2.6.0",
+    "request": "^2.85.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
