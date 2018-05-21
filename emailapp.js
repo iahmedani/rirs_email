@@ -175,6 +175,7 @@ app.post('/email', (req, resp)=>{
       return console.log(error);
     }
     console.log('Message sent: %s', info.messageId);
+    resp.sendStatus(200);
     // Preview only available when sending through an Ethereal account
     console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
 
